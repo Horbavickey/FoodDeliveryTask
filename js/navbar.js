@@ -2,7 +2,7 @@
 
 async function loadNavbar() {
   try {
-    const res = await fetch("/components/navbar.html");
+    const res = await fetch("components/navbar.html");
     if (!res.ok) throw new Error("Failed to load navbar");
     const html = await res.text();
     document.getElementById("navbarContainer").innerHTML = html;
