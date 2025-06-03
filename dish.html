@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dish Details - Horbavickey Foods</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .star {
+      font-size: 1.8rem;
+      color: #ffc107;
+      cursor: pointer;
+    }
+    .star.inactive {
+      color: #e4e5e9;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- Navbar -->
+  <div id="navbarContainer"></div>
+
+  <main class="container my-4" style="max-width: 600px;">
+    <h2 id="dishName" class="text-warning fw-bold mb-3"></h2>
+    <img id="dishImage" src="" alt="Dish Image" class="img-fluid rounded shadow mb-3" />
+    <p id="dishDescription" class="mb-4"></p>
+    <p><strong>Category:</strong> <span id="dishCategory"></span></p>
+    <p><strong>Price:</strong> $<span id="dishPrice"></span></p>
+    <p><strong>Vegetarian:</strong> <span id="dishVegetarian"></span></p>
+
+    <div class="mb-4">
+      <h5>Rate this dish:</h5>
+      <div id="ratingStars" class="d-flex"></div>
+    </div>
+
+    <button id="addToCartBtn" class="btn btn-warning w-100 fw-semibold">Add to Cart</button>
+  </main>
+
+  <!-- Footer -->
+  <div id="footerContainer"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+    <div id="toast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth_utils.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/dish.js"></script>
+</body>
+</html>

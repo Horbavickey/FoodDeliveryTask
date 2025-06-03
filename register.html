@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register - Horbavickey Foods</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light register-bg">
+
+  <!-- Navbar -->
+  <div id="navbarContainer"></div>
+
+  <main class="container d-flex flex-column justify-content-center align-items-center my-5">
+    <div class="card shadow rounded-4 p-4" style="max-width: 480px; width: 100%;">
+      <h2 class="text-center mb-4 text-warning fw-bold">Create Your Account</h2>
+      <form id="registerForm" novalidate>
+        <div class="mb-3">
+          <label for="fullName" class="form-label fw-semibold">Full Name</label>
+          <input type="text" id="fullName" class="form-control" placeholder="John Doe" required />
+          <div class="invalid-feedback">Please enter your full name.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="name@example.com" required />
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label fw-semibold">Password (min 6 characters)</label>
+          <input type="password" id="password" class="form-control" required minlength="6" />
+          <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="gender" class="form-label fw-semibold">Gender</label>
+          <select id="gender" class="form-select" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <div class="invalid-feedback">Please select your gender.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="phoneNumber" class="form-label fw-semibold">Phone Number</label>
+          <input type="tel" id="phoneNumber" class="form-control" placeholder="+7 (___) ___-__-__" />
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label fw-semibold">Address</label>
+          <input type="text" id="address" class="form-control" placeholder="Your address" />
+        </div>
+
+        <div class="mb-3">
+          <label for="birthDate" class="form-label fw-semibold">Birth Date</label>
+          <input type="date" id="birthDate" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-warning w-100 fw-semibold">Register</button>
+      </form>
+      <div class="text-center mt-3">
+        <a href="login.html" class="text-decoration-none text-muted">Already have an account? Login</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footerContainer"></div>
+
+  <!-- Toast Container -->
+  <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+    <div id="toast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body" id="toastMessage"></div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth_utils.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
